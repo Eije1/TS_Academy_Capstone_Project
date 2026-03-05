@@ -18,7 +18,7 @@ This capstone project focuses on the computational analysis of the Brain_GSE5016
 ## Team Members (Group 19)
 
 | # | Name | Role | GitHub | Email |
-|---|------|------|--------|-------|
+|---|----------|-------------|------------|----------|
 | 1 | **EIJE, OLOCHE CELESTINE** | Team Lead | [@Eije1](https://github.com/Eije1) | eijeoloche1@gmail.com |
 | 2 | **AREMU, JACOBS OPEYEMI** | Member | [@aremu-jacobs](https://github.com/aremu-jacobs) | jacobsage4ril@gmail.com |
 | 3 | **IKHALEA, EMMANUEL** | Member | [@DeveloperIkhalea](https://github.com/DeveloperIkhalea) | Dev.ikhalea@gmail.com |
