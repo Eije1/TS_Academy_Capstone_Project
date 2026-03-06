@@ -1,19 +1,16 @@
 # **TS ACADEMY Capstone Project - Group 19 (March 2026)**
 
-### Title: Brain Cancer Gene Expression Analysis for Subtype Classification and Biomarker Discovery
+## Brain Cancer Gene Expression Analysis for Subtype Classification and Biomarker Discovery
 
-## Project Overview
-
-This capstone project focuses on the computational analysis of the Brain_GSE50161 dataset, containing 54,676 gene expression features across 130 samples representing four distinct brain cancer types (ependymoma, glioblastoma, medulloblastoma, pilocytic astrocytoma) and normal tissue. The primary objective is to develop machine learning models capable of accurately classifying brain cancer subtypes while identifying potential biomarkers for diagnostic and therapeutic applications.
-
-**Aims and Objectives:**
-- Analyze gene expression patterns driving tumor growth and subtype differentiation
-- Develop supervised learning models for accurate brain cancer subtype classification
-- Identify "Elite" genes (potential biomarkers) with highest diagnostic value
-- Evaluate therapeutic insights for precision oncology applications
-- Address challenges of high dimensionality and small sample size
-
----
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-orange)
+![Pandas](https://img.shields.io/badge/pandas-1.3%2B-green)
+![Genomics](https://img.shields.io/badge/Genomics-Bioinformatics-ff69b4)
+![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=flat&logo=googlecolab&color=525252)
+![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+![Status](https://img.shields.io/badge/status-Completed-success)
+![Last Updated](https://img.shields.io/badge/last%20updated-March%202026-brightgreen)
 
 ## Team Members (Group 19)
 
@@ -30,9 +27,53 @@ This capstone project focuses on the computational analysis of the Brain_GSE5016
 | 9 | **SULE, WASIU AYINDE** | Member | [@Engrbolajipraise1](https://github.com/Engrbolajipraise1) | bolajipraise1@gmail.com |
 | 10 | **MUHAMMED, OLATUNJI TIAMIYU** | Member | [@olatunjee9](https://github.com/olatunjee9) | tiamiyuolatunji1@gmail.com |
 
----
+## **1. Project Overview**
+Brain cancer remains one of the most aggressive and life-threatening malignancies worldwide. Studies shows that different subtypes (glioblastoma vs ependymoma) require vastly different treatment approaches, making accurate classification essential. Thus, this capstone project leverages machine learning and gene expression analysis to classify brain cancer subtypes and identify potential biomarkers for diagnostic and therapeutic applications.This capstone project focuses on the computational analysis of the Brain_GSE50161 dataset, containing 54,676 gene expression features across 130 samples representing four distinct brain cancer types (ependymoma, glioblastoma, medulloblastoma, pilocytic astrocytoma) and normal tissue. The primary objective is to develop machine learning models capable of accurately classifying brain cancer subtypes while identifying potential biomarkers for diagnostic and therapeutic applications.
 
-## Dataset Description
+### 1.1 **Aims and Objectives:**
+- Analyze gene expression patterns across 4 brain cancer subtypes and normal tissue, which drives tumor growth and subtype differentiation
+- Develop supervised learning models for accurate brain cancer subtype classification
+- Identify "Elite" genes (potential biomarkers) with highest diagnostic value
+- Evaluate therapeutic insights for precision oncology applications
+- Address challenges of high dimensionality and small sample size
+
+
+### 1.2 **Why This Matters**
+
+| Challenge | Our Solution |
+|-----------|--------------|
+| 54,676 genes make analysis complex | **30 genes** provide 92%+ accuracy |
+| Traditional analysis misses subtle patterns | **ML identifies** hidden genetic signatures |
+| Full genome sequencing is expensive | **Cost-effective** diagnostic panels possible |
+| Treatment varies by subtype | **Precision oncology** becomes accessible |
+
+
+
+## 2. Dataset Description
+The Brain_GSE50161 dataset contains gene expression profiles from 130 human brain tissue samples, comprising four distinct tumor types and normal tissue controls. This microarray data provides a comprehensive molecular portrait of brain cancer subtypes.
+- **Data Name:** Brain_GSE50161.csv 
+- **Size of Data:** >120MB
+- **Missing Values:** None
+- **Source:** Kaggle [https://www.kaggle.com/datasets/brunogrisci/brain-cancer-gene-expression-cumida]
+
+### **2.1 Dataset Statistics**
+---
+| Attribute | Value |
+|-----------|-------|
+| **Total Samples** | 130 |
+| **Gene Features** | 54,676 |
+| **Classes** | 5 (4 tumor types + normal) |
+| **Data Type** | Microarray gene expression |
+
+### **2.2 Class Distribution**
+---
+| Class | Count | Percentage |
+|-------|-------|------------|
+| Ependymoma | 46 | 35.4% |
+| Glioblastoma | 34 | 26.2% |
+| Medulloblastoma | 22 | 16.9% |
+| Pilocytic Astrocytoma | 15 | 11.5% |
+| Normal | 13 | 10.0% |
 
 - **Source:** Gene Expression Omnibus (GEO) - Brain_GSE50161
 - **Samples:** 130 patient samples
@@ -148,6 +189,267 @@ Brain cancer remains one of the most aggressive malignancies worldwide. Differen
 - **Clinical Diagnostics**: Develop PCR-based test panels targeting the 30 elite genes
 - **Drug Discovery**: Investigate top biomarkers as therapeutic targets
 - **Treatment Planning**: Faster, more accurate subtype identification
-- **Research Tool**: Open-source pipeline for other cancer type analysis
 
 
+
+
+# Brain Cancer Gene Expression Analysis for Subtype Classification and Biomarker Discovery
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Last Updated](https://img.shields.io/badge/last%20updated-March%202025-brightgreen)
+
+## 📋 Table of Contents
+- [Project Overview](#project-overview)
+- [Team Members](#team-members)
+- [Key Findings](#key-findings)
+- [Dataset](#dataset)
+- [Methodology](#methodology)
+- [Results](#results)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Performance](#model-performance)
+- [Biomarker Discovery](#biomarker-discovery)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## 🎯 Project Overview
+
+Brain cancer remains one of the most aggressive and life-threatening malignancies worldwide. This project leverages machine learning and gene expression analysis to classify brain cancer subtypes and identify potential biomarkers for diagnosis and treatment.
+
+**Key Objectives:**
+- 🔬 Analyze gene expression patterns across 4 brain cancer subtypes and normal tissue
+- 🤖 Develop ML models for accurate subtype classification
+- 🧬 Identify "Elite" genes as potential biomarkers
+- 💊 Evaluate therapeutic insights for precision oncology
+- ⚡ Optimize high-dimensional data processing
+
+## 👥 Team Members (Group 19)
+
+| Name | Role | GitHub | Email |
+|------|------|--------|-------|
+| **Eije, Oloche Celestine** | Team Lead | [@Eije1](https://github.com/Eije1) | eijeoloche1@gmail.com |
+| Aremu, Jacobs Opeyemi | Member | [@aremu-jacobs](https://github.com/aremu-jacobs) | jacobsage4ril@gmail.com |
+| Ikhalea, Emmanuel | Member | [@DeveloperIkhalea](https://github.com/DeveloperIkhalea) | Dev.ikhalea@gmail.com |
+| David, Brainerd | Member | [@Brainerd007](https://github.com/Brainerd007) | brainerddavid9@gmail.com |
+| Ezeokwelume, Mary | Member | [@obyokwelume-coder](https://github.com/obyokwelume-coder) | obyokwelume@gmail.com |
+| Itunu, Ifeoluwa Adeniji | Member | [@Ife-ahav](https://github.com/Ife-ahav/Ife.git) | itunuadeniji31@gmail.com |
+| Ajibola, Joshua | Member | [@JManBoss](https://github.com/JManBoss/joshman.github.io.git) | joshuaajibola00@gmail.com |
+| Raji, Ridwanullah | Member | [@DevRSR](https://github.com/DevRSR) | rajiridwanullah25@gmail.com |
+| Sule, Wasiu Ayinde | Member | [@Engrbolajipraise1](https://github.com/Engrbolajipraise1) | bolajipraise1@gmail.com |
+| Muhammed, Olatunji Tiamiyu | Member | [@olatunjee9](https://github.com/olatunjee9) | tiamiyuolatunji1@gmail.com |
+
+## 📊 Key Findings
+
+- **Best Model:** Random Forest achieved **92.31% accuracy** after hyperparameter tuning
+- **Feature Reduction:** Reduced from 54,675 genes to **30-gene signature** using RFE
+- **Cross-Validation:** Maintained **89.23%** average CV score
+- **Key Biomarkers:** Identified Gene 54638 and Gene 33848 as top discriminators
+- **PCA Analysis:** First 2 components explain significant variance in tumor subtypes
+
+## 📁 Dataset
+
+**Source:** Brain_GSE50161.csv from Gene Expression Omnibus (GEO)
+
+| Attribute | Value |
+|-----------|-------|
+| Samples | 130 |
+| Features | 54,676 genes |
+| Classes | 5 (4 tumor types + normal) |
+| Tumor Types | Ependymoma, Glioblastoma, Medulloblastoma, Pilocytic Astrocytoma, Normal |
+
+**Class Distribution:**
+- Ependymoma: 46 samples
+- Glioblastoma: 34 samples
+- Medulloblastoma: 22 samples
+- Pilocytic Astrocytoma: 15 samples
+- Normal: 13 samples
+
+## 🔬 Methodology
+
+### Data Preprocessing
+- ✅ Data cleaning and missing value check
+- ✅ StandardScaler normalization
+- ✅ Label encoding for target variable
+
+### Feature Selection
+- ✅ Variance threshold filtering
+- ✅ ANOVA F-tests (SelectKBest)
+- ✅ Random Forest feature importance
+- ✅ Recursive Feature Elimination (RFE)
+
+### Machine Learning Models
+1. **Logistic Regression** (Baseline)
+2. **Random Forest Classifier**
+3. **Random Forest with RFE + Hyperparameter Tuning**
+
+### Evaluation Strategy
+- 80/20 Train-Test split
+- 5-Fold Cross-Validation
+- Metrics: Accuracy, Precision, Recall, F1-score
+- Confusion Matrix analysis
+
+## 📈 Results
+
+### Model Performance Comparison
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|----------|-----------|--------|----------|
+| Logistic Regression | 84.62% | 0.85 | 0.85 | 0.84 |
+| Random Forest | 88.46% | 0.88 | 0.88 | 0.88 |
+| **Random Forest (Tuned + RFE)** | **92.31%** | **0.92** | **0.92** | **0.92** |
+
+### Top 10 Biomarkers Identified
+
+| Rank | Gene | Log2FC | p-value | -log10p |
+|------|------|--------|---------|---------|
+| 1 | Gene 54638 | ... | ... | ... |
+| 2 | Gene 33848 | ... | ... | ... |
+| 3 | Gene 51378 | ... | ... | ... |
+| 4 | Gene 15466 | ... | ... | ... |
+| 5 | Gene 31086 | ... | ... | ... |
+| 6 | Gene 18487 | ... | ... | ... |
+| 7 | Gene 19603 | ... | ... | ... |
+| 8 | Gene 11886 | ... | ... | ... |
+| 9 | Gene 19474 | ... | ... | ... |
+| 10 | Gene 15637 | ... | ... | ... |
+
+
+
+
+## 📋 Table of Contents
+- [Project Overview](#project-overview)
+- [Key Findings](#key-findings)
+- [Team Members](#team-members)
+- [Dataset](#dataset)
+- [Methodology](#methodology)
+- [Results](#results)
+- [Biomarker Discovery](#biomarker-discovery)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Performance](#model-performance)
+- [Repository Structure](#repository-structure)
+- [Real-World Applications](#real-world-applications)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+
+---
+
+## 📊 Key Findings
+
+| Metric | Value |
+|--------|-------|
+| **Best Model Accuracy** | **92.31%** |
+| Feature Reduction | 54,675 → 30 genes (99.95% reduction) |
+| Cross-Validation Score | 89.23% |
+| Top Biomarkers | Gene 54638, Gene 33848 |
+| Baseline Improvement | +7.69% over Logistic Regression |
+
+
+## Dataset
+---
+**Source:** [Gene Expression Omnibus (GEO)]([https://www.ncbi.nlm.nih.gov/geo/](https://www.kaggle.com/datasets/brunogrisci/brain-cancer-gene-expression-cumida)) - Brain_GSE50161
+
+### Dataset Statistics
+
+| Attribute | Value |
+|-----------|-------|
+| **Total Samples** | 130 |
+| **Gene Features** | 54,676 |
+| **Classes** | 5 (4 tumor types + normal) |
+| **Data Type** | Microarray gene expression |
+
+### Class Distribution
+
+| Class | Count | Percentage |
+|-------|-------|------------|
+| Ependymoma | 46 | 35.4% |
+| Glioblastoma | 34 | 26.2% |
+| Medulloblastoma | 22 | 16.9% |
+| Pilocytic Astrocytoma | 15 | 11.5% |
+| Normal | 13 | 10.0% |
+
+<p align="center">
+  <img src="figures/class_distribution.png" alt="Class Distribution" width="500"/>
+</p>
+
+---
+
+## Methodology
+
+### Data Preprocessing Pipeline
+
+```python
+# Key preprocessing steps
+1. Data loading and inspection
+2. Missing value check (none found)
+3. Feature renaming (Gene 1 to Gene 54675)
+4. StandardScaler normalization
+5. Label encoding for target variable
+
+
+---
+
+## 📊 Key Findings
+
+| Metric | Value |
+|--------|-------|
+| **Best Model Accuracy** | **92.31%** |
+| Feature Reduction | 54,675 → 30 genes (99.95% reduction) |
+| Cross-Validation Score | 89.23% |
+| Top Biomarkers | Gene 54638, Gene 33848 |
+| Baseline Improvement | +7.69% over Logistic Regression |
+
+---
+
+
+
+---
+
+## Dataset
+
+**Source:** [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) - Brain_GSE50161
+
+### Dataset Statistics
+
+| Attribute | Value |
+|-----------|-------|
+| **Total Samples** | 130 |
+| **Gene Features** | 54,676 |
+| **Classes** | 5 (4 tumor types + normal) |
+| **Data Type** | Microarray gene expression |
+
+### Class Distribution
+
+| Class | Count | Percentage |
+|-------|-------|------------|
+| Ependymoma | 46 | 35.4% |
+| Glioblastoma | 34 | 26.2% |
+| Medulloblastoma | 22 | 16.9% |
+| Pilocytic Astrocytoma | 15 | 11.5% |
+| Normal | 13 | 10.0% |
+
+<p align="center">
+  <img src="figures/class_distribution.png" alt="Class Distribution" width="500"/>
+</p>
+
+---
+
+## 🔬 Methodology
+
+### Data Preprocessing Pipeline
+
+```python
+# Key preprocessing steps
+1. Data loading and inspection
+2. Missing value check (none found)
+3. Feature renaming (Gene 1 to Gene 54675)
+4. StandardScaler normalization
+5. Label encoding for target variable
